@@ -44,6 +44,19 @@
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  /* ---------- images fade in/out both ways as they cross the viewport ---------- */
+  var fadeEls = document.querySelectorAll('.fade-img');
+  if ('IntersectionObserver' in window) {
+    var fadeIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        entry.target.classList.toggle('is-visible', entry.isIntersecting);
+      });
+    }, { threshold: 0.1, rootMargin: '-8% 0px -8% 0px' });
+    fadeEls.forEach(function (el) { fadeIO.observe(el); });
+  } else {
+    fadeEls.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
   /* ---------- delicate cursor glow (desktop only) ---------- */
   var glow = document.querySelector('.cursor-glow');
   var hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
