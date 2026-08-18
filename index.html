@@ -219,98 +219,79 @@
     </div>
 
     <div class="tourmap__wrap" data-reveal>
-      <svg class="tourmap__svg" viewBox="0 0 880 600" role="img" aria-label="Mapa de escenarios de Duo Sonus en Noruega, Dinamarca, Finlandia, Lituania y Argentina">
-        <!-- stylised landmasses, one per country/region so every pin sits inside its own shape -->
-        <path class="tourmap__land" d="M110 38 C 148 40, 172 68, 172 100 C 172 134, 146 162, 110 162 C 74 162, 48 134, 48 100 C 48 66, 72 40, 110 38 Z"/>
-        <path class="tourmap__land" d="M225 42 C 280 30, 345 55, 358 105 C 368 145, 340 185, 290 192 C 235 200, 178 175, 175 125 C 173 85, 185 55, 225 42 Z"/>
-        <path class="tourmap__land" d="M405 32 C 460 20, 525 42, 540 95 C 552 138, 520 175, 470 182 C 415 190, 358 165, 356 112 C 354 72, 365 45, 405 32 Z"/>
-        <path class="tourmap__land" d="M355 240 C 420 225, 500 250, 518 305 C 533 350, 505 400, 450 415 C 395 430, 320 405, 302 350 C 288 305, 300 260, 355 240 Z"/>
-        <path class="tourmap__land" d="M110 260 C 175 245, 260 260, 295 305 C 320 335, 315 375, 300 405 C 325 440, 310 490, 260 520 C 205 548, 120 542, 70 505 C 30 475, 22 425, 45 385 C 20 350, 25 300, 65 275 C 80 265, 95 262, 110 260 Z"/>
-        <path class="tourmap__land" d="M695 68 C 745 55, 795 90, 800 150 C 805 195, 775 225, 765 255 C 800 290, 810 345, 785 395 C 810 415, 800 465, 750 485 C 700 505, 635 480, 622 425 C 610 380, 635 345, 660 320 C 630 285, 615 235, 635 185 C 650 135, 655 90, 695 68 Z"/>
+      <svg class="tourmap__svg" viewBox="0 0 1040 620" role="img" aria-label="Mapa con las siluetas reales de Noruega, Dinamarca, Finlandia, Lituania y Argentina, marcando las ciudades donde tocó Duo Sonus">
+        <!-- real country silhouettes, one path per country (Mercator projection, own accordion tour cities only) -->
+        <path class="tourmap__land" d="M175.115,74.946L167.217,80.224L163.476,81.413L165.43,72.168L159.485,66.782L152.288,71.372L150,81.061L145.575,86.768L140.599,83.667L134.554,84.299L129.394,77.43L126.606,80.885L123.733,81.413L123.049,89.835L114.315,87.801L113.08,94.784L108.621,94.742L105.565,103.437L100.923,116.465L93.726,132.196L95.413,135.895L93.793,140.123L89.201,139.944L86.195,149.726L86.479,163.042L89.434,167.986L87.898,179.123L84.041,185.44L82.004,190.66L78.881,185.1L69.73,195.494L63.535,197.55L57.123,193.049L55.469,183.333L54,161.376L58.275,154.943L70.515,146.355L79.682,135.458L88.165,120.042L99.32,97.247L107.085,87.865L119.826,71.486L130.012,65.53L137.643,66.25L144.707,54.681L153.156,55.308L161.489,52.45L176,62.798L170.022,66.481Z"/>
+        <path class="tourmap__land" d="M294.225,158.654L279.416,164.778L261.943,159.472L252.542,136.967L251.876,94.681L255.703,83.36L262.359,70.661L282.66,67.993L290.814,56.188L309.368,44L308.619,66.116L301.797,79.926L304.542,91.769L317.106,98.083L311.448,113.792L304.542,109.3L287.902,138.901ZM350.802,112.6L358.124,133.232L344.313,166L320.101,143.243L316.856,126.222Z"/>
+        <path class="tourmap__land" d="M538.541,71.55L537.158,89.636L551.492,106.337L542.858,124.64L553.752,151.274L547.445,170.533L555.877,186.786L552.066,200.653L565.927,214.901L562.386,225.277L553.684,236.821L533.651,261.63L516.653,263.141L500.16,270.042L484.916,274L479.486,263.719L470.413,257.494L472.505,238.328L467.951,220.232L472.437,208.224L480.936,195.037L502.353,171.581L508.592,166.927L507.648,157.432L494.595,146.652L491.459,137.613L491.189,100.416L476.585,83.192L464.073,70.484L469.705,63.506L480.127,77.379L492.336,76.103L502.386,82.365L511.324,70.84L515.944,51.27L530.48,42L542.487,52.877Z"/>
+        <path class="tourmap__land" d="M413.598,314.375L416,334.565L394.936,348.956L389.023,373.904L361.122,390.42L336.362,390.125L330.172,376.654L317.053,371.894L314.928,360.686L317.699,348.503L306.336,341.396L279.451,333.576L274,295.353L303.379,281.226L346.432,284.201L371.654,279.58L375.257,289.201L388.93,292.163Z"/>
+        <path class="tourmap__land" d="M747.299,527.52L751.979,536.943L758.117,552.395L774.057,564.979L791.234,570.244L785.714,580.944L774.057,582L767.831,574.458L760.413,573.88L747.299,573.844ZM882.327,154.6L879.237,166.01L875.969,180.795L876.101,195.275L873.408,198.548L872.481,208.068L871.642,215.796L887.229,228.598L885.551,239.02L893.19,245.631L892.572,253.11L880.782,272.931L862.59,281.334L837.995,284.612L824.527,283.038L827.133,292.458L824.616,304.402L826.868,312.528L819.494,318.237L806.953,320.496L795.164,314.556L790.395,318.815L792.117,335.102L800.418,340.091L807.13,334.878L810.751,343.496L799.491,348.667L789.644,359.116L787.834,376.287L784.919,385.528L773.351,385.586L763.725,394.499L760.192,407.721L772.247,420.82L783.992,424.452L779.753,440.827L765.27,451.243L757.322,473.267L746.106,480.835L741.117,489.843L745.047,510.209L753.215,521.757L748.049,520.738L736.701,517.587L707.028,514.918L701.95,503.391L702.215,488.761L694.046,490.007L689.719,483.014L688.659,462.858L698.065,454.614L701.95,442.851L700.493,433.576L707.028,418.144L711.488,394.677L710.163,384.441L715.55,381.16L714.226,374.659L708.53,371.235L712.592,364.078L707.028,357.657L704.158,338.35L709.104,334.99L707.028,315.05L709.898,298.576L713.21,284.425L720.54,278.703L716.831,263.515L716.787,249.377L726.06,239.43L725.75,226.819L732.771,212.278L732.815,198.697L729.636,196.019L723.984,170.985L731.535,156.307L730.343,142.615L734.758,129.879L742.795,116.831L751.449,108.264L747.784,102.873L750.345,98.471L749.948,75.842L763.283,69.215L767.522,55.315L766.021,51.981L776.221,40L792.293,43.223L799.491,52.814L804.304,42.148L818.257,42.686L820.244,45.532L842.808,67.284L852.831,69.306L867.8,79.268L880.429,84.558L882.195,90.556L870.14,111.363L882.504,115.1L896.281,117.229L905.995,115.006L917.122,104.451L919.109,92.398L925.203,89.773L931.341,97.638L931.076,108.59L920.743,116.199L912.53,121.849L898.665,135.368Z"/>
 
         <!-- region labels -->
-        <text class="tourmap__region" x="110" y="50">NORWAY</text>
-        <text class="tourmap__region" x="270" y="48">DENMARK</text>
-        <text class="tourmap__region" x="450" y="46">FINLAND</text>
-        <text class="tourmap__region" x="420" y="256">LITHUANIA</text>
-        <text class="tourmap__region" x="95" y="262">DENMARK</text>
-        <text class="tourmap__region" x="700" y="88">ARGENTINA</text>
+        <text class="tourmap__region" x="115" y="20">NORWAY</text>
+        <text class="tourmap__region" x="305" y="20">DENMARK</text>
+        <text class="tourmap__region" x="515" y="18">FINLAND</text>
+        <text class="tourmap__region" x="345" y="250">LITHUANIA</text>
+        <text class="tourmap__region" x="810" y="16">ARGENTINA</text>
 
-        <!-- connective routes, one per cluster -->
-        <path class="tourmap__route" d="M240 90 L300 150" fill="none"/>
-        <path class="tourmap__route" d="M420 80 L470 150" fill="none"/>
-        <path class="tourmap__route" d="M360 290 L460 360" fill="none"/>
-        <path class="tourmap__route" d="M85 395 L160 410 L160 308 L270 325 L270 440" fill="none"/>
-        <path class="tourmap__route" d="M680 140 L760 280 L735 380 L770 430 L690 420" fill="none"/>
+        <!-- connective routes, one per country -->
+        <path class="tourmap__route" d="M264.1 102.2 L294.4 115.5 L355.4 130.3" fill="none"/>
+        <path class="tourmap__route" d="M487.4 194.6 L504.3 267.9" fill="none"/>
+        <path class="tourmap__route" d="M294.4 300.4 L382.4 355.9" fill="none"/>
+        <path class="tourmap__route" d="M801.9 171.8 L873.1 218.3 L863.9 259.5 L849.8 276 L876.6 270.7" fill="none"/>
 
-        <!-- pins -->
-        <g class="tourmap__pin" data-city="Voss" style="--x:110px;--y:100px;">
-          <circle cx="110" cy="100" r="5"/>
-          <text x="110" y="124">Voss</text>
+        <!-- city pins (cities only, no districts/neighbourhoods) -->
+        <g class="tourmap__pin" data-city="Voss">
+          <circle cx="60.6" cy="174.3" r="5"/>
+          <text x="60.6" y="197">Voss</text>
         </g>
-        <g class="tourmap__pin" data-city="Holstebro" style="--x:240px;--y:90px;">
-          <circle cx="240" cy="90" r="4"/>
-          <text x="240" y="76">Holstebro</text>
+        <g class="tourmap__pin" data-city="Copenhagen">
+          <circle cx="355.4" cy="130.3" r="5"/>
+          <text x="355.4" y="152">Copenhagen</text>
         </g>
-        <g class="tourmap__pin" data-city="Skanderborg" style="--x:300px;--y:150px;">
-          <circle cx="300" cy="150" r="4"/>
-          <text x="300" y="170">Skanderborg</text>
+        <g class="tourmap__pin" data-city="Holstebro">
+          <circle cx="264.1" cy="102.2" r="4"/>
+          <text x="264.1" y="88">Holstebro</text>
         </g>
-        <g class="tourmap__pin" data-city="Kokkola" style="--x:420px;--y:80px;">
-          <circle cx="420" cy="80" r="4"/>
-          <text x="420" y="66">Kokkola</text>
+        <g class="tourmap__pin" data-city="Skanderborg">
+          <circle cx="294.4" cy="115.5" r="4"/>
+          <text x="230" y="120">Skanderborg</text>
         </g>
-        <g class="tourmap__pin" data-city="Helsinki" style="--x:470px;--y:150px;">
-          <circle cx="470" cy="150" r="5"/>
-          <text x="470" y="170">Helsinki</text>
+        <g class="tourmap__pin" data-city="Helsinki">
+          <circle cx="504.3" cy="267.9" r="5"/>
+          <text x="504.3" y="290">Helsinki</text>
         </g>
-        <g class="tourmap__pin" data-city="Plungė" style="--x:360px;--y:290px;">
-          <circle cx="360" cy="290" r="4"/>
-          <text x="352" y="278">Plungė</text>
+        <g class="tourmap__pin" data-city="Kokkola">
+          <circle cx="487.4" cy="194.6" r="4"/>
+          <text x="487.4" y="181">Kokkola</text>
         </g>
-        <g class="tourmap__pin" data-city="Vilnius" style="--x:460px;--y:360px;">
-          <circle cx="460" cy="360" r="5"/>
-          <text x="468" y="382">Vilnius</text>
+        <g class="tourmap__pin" data-city="Vilnius">
+          <circle cx="382.4" cy="355.9" r="5"/>
+          <text x="382.4" y="378">Vilnius</text>
         </g>
-        <g class="tourmap__pin" data-city="Søborg" style="--x:160px;--y:308px;">
-          <circle cx="160" cy="308" r="4"/>
-          <text x="160" y="288">Søborg</text>
+        <g class="tourmap__pin" data-city="Plungė">
+          <circle cx="294.4" cy="300.4" r="4"/>
+          <text x="284" y="288">Plungė</text>
         </g>
-        <g class="tourmap__pin" data-city="Charlottenlund" style="--x:270px;--y:325px;">
-          <circle cx="270" cy="325" r="4"/>
-          <text x="280" y="310">Charlottenlund</text>
+        <g class="tourmap__pin" data-city="Córdoba">
+          <circle cx="801.9" cy="171.8" r="5"/>
+          <text x="801.9" y="155">Córdoba</text>
         </g>
-        <g class="tourmap__pin" data-city="Copenhagen" style="--x:160px;--y:410px;">
-          <circle cx="160" cy="410" r="5"/>
-          <text x="160" y="436">Copenhagen</text>
+        <g class="tourmap__pin" data-city="Buenos Aires">
+          <circle cx="873.1" cy="218.3" r="5"/>
+          <text x="912" y="208">Buenos Aires</text>
         </g>
-        <g class="tourmap__pin" data-city="Frederiksberg" style="--x:85px;--y:395px;">
-          <circle cx="85" cy="395" r="4"/>
-          <text x="85" y="364">Frederiksberg</text>
+        <g class="tourmap__pin" data-city="Tandil">
+          <circle cx="863.9" cy="259.5" r="4"/>
+          <text x="825" y="253">Tandil</text>
         </g>
-        <g class="tourmap__pin" data-city="Refshaleøen" style="--x:270px;--y:440px;">
-          <circle cx="270" cy="440" r="4"/>
-          <text x="285" y="464">Refshaleøen</text>
+        <g class="tourmap__pin" data-city="Necochea">
+          <circle cx="876.6" cy="270.7" r="4"/>
+          <text x="915" y="262">Necochea</text>
         </g>
-        <g class="tourmap__pin" data-city="Córdoba" style="--x:680px;--y:140px;">
-          <circle cx="680" cy="140" r="5"/>
-          <text x="680" y="124">Córdoba</text>
-        </g>
-        <g class="tourmap__pin" data-city="Buenos Aires" style="--x:760px;--y:280px;">
-          <circle cx="760" cy="280" r="5"/>
-          <text x="790" y="268">Buenos Aires</text>
-        </g>
-        <g class="tourmap__pin" data-city="Tandil" style="--x:735px;--y:380px;">
-          <circle cx="735" cy="380" r="4"/>
-          <text x="735" y="400">Tandil</text>
-        </g>
-        <g class="tourmap__pin" data-city="Necochea" style="--x:770px;--y:430px;">
-          <circle cx="770" cy="430" r="4"/>
-          <text x="805" y="438">Necochea</text>
-        </g>
-        <g class="tourmap__pin" data-city="Tres Arroyos" style="--x:690px;--y:420px;">
-          <circle cx="690" cy="420" r="4"/>
-          <text x="650" y="428">Tres Arroyos</text>
+        <g class="tourmap__pin" data-city="Tres Arroyos">
+          <circle cx="849.8" cy="276" r="4"/>
+          <text x="805" y="296">Tres Arroyos</text>
         </g>
       </svg>
     </div>
