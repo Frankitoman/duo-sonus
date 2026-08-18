@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duo Sonus — Accordion Duo</title>
+<meta name="description" content="Duo Sonus is an accordion duo based in Copenhagen, blending traditional tango, classical nuances and contemporary music for concerts, weddings and private events across Europe.">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="grain-overlay" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__brand">
+      <span class="nav__mark">DS</span>
+      <span class="nav__word">Duo Sonus</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Navegación principal">
+      <a href="#sobre">About</a>
+      <a href="#repertorio">Repertoire</a>
+      <a href="#trayectoria">Journey</a>
+      <a href="#mapa">Map</a>
+      <a href="#galeria">Gallery</a>
+      <a href="#contacto">Booking</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a href="https://frankitoman.github.io/web-portfolio/" target="_blank" rel="noopener" class="nav__portfolio">Portfolio ↗</a>
+      <a href="#contacto" class="btn btn--gold nav__cta">Book the Duo</a>
+      <button class="nav__burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="nav__mobile" id="navMobile">
+    <a href="#sobre">About</a>
+    <a href="#repertorio">Repertoire</a>
+    <a href="#trayectoria">Journey</a>
+    <a href="#mapa">Map</a>
+    <a href="#galeria">Gallery</a>
+    <a href="#contacto">Booking</a>
+    <a href="https://frankitoman.github.io/web-portfolio/" target="_blank" rel="noopener">Portfolio ↗</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="none">
+      <source src="assets/video/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="hero__ornament" aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none"><path d="M100 10 C 40 10, 10 60, 10 100 C 10 140, 40 190, 100 190 C 160 190, 190 140, 190 100 C 190 60, 160 10, 100 10 Z" stroke="currentColor" stroke-width="0.6"/></svg>
+    </div>
+
+    <div class="hero__inner" data-reveal>
+      <span class="eyebrow hero__eyebrow">Accordion Duo — Copenhagen</span>
+      <h1 class="hero__title">Duo<span>Sonus</span></h1>
+      <p class="hero__tagline">Tango tradicional, matices clásicos y música contemporánea, interpretados a dos acordeones.</p>
+      <p class="hero__tagline hero__tagline--en">Traditional tango, classical nuance and contemporary music, performed on two accordions.</p>
+      <div class="hero__cta">
+        <a href="#contacto" class="btn btn--gold">Book the Duo</a>
+        <a href="#sobre" class="btn btn--ghost">Discover the duo</a>
+      </div>
+    </div>
+
+    <a href="#sobre" class="hero__scroll" aria-label="Bajar a la siguiente sección">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="sobre">
+    <div class="about__inner">
+      <div class="about__visual" data-reveal>
+        <div class="about__frame">
+          <svg class="about__bellows" viewBox="0 0 240 320" fill="none" aria-hidden="true">
+            <rect x="40" y="20" width="160" height="30" rx="4" stroke="currentColor" stroke-width="1"/>
+            <rect x="40" y="270" width="160" height="30" rx="4" stroke="currentColor" stroke-width="1"/>
+            <path d="M40 50 L55 65 L40 80 L55 95 L40 110 L55 125 L40 140 L55 155 L40 170 L55 185 L40 200 L55 215 L40 230 L55 245 L40 260" stroke="currentColor" stroke-width="1"/>
+            <path d="M200 50 L185 65 L200 80 L185 95 L200 110 L185 125 L200 140 L185 155 L200 170 L185 185 L200 200 L185 215 L200 230 L185 245 L200 260" stroke="currentColor" stroke-width="1"/>
+            <circle cx="120" cy="160" r="46" stroke="currentColor" stroke-width="0.8"/>
+            <circle cx="120" cy="160" r="4" fill="currentColor"/>
+          </svg>
+          <span class="about__frame-label">Photos coming soon</span>
+        </div>
+      </div>
+
+      <div class="about__text" data-reveal>
+        <span class="eyebrow">Since 2021</span>
+        <h2>A vibrant, dynamic musical partnership</h2>
+        <p class="lead">Duo Sonus brings together two accordionists renowned for their innovative interpretations of traditional and contemporary music. With a shared passion for world music, our performances seamlessly blend the soulful melodies of tango, classical influences and modern tunes.</p>
+        <p>Formed in Copenhagen and trained at the Royal Danish Academy of Music, Amalie Ravnsbæk and Romena Lengvinaite have carried their sound from conservatory stages in Helsinki and Kokkola to concert halls, embassies and private celebrations across Denmark and the Baltics.</p>
+
+        <div class="about__stats">
+          <div class="about__stat">
+            <span class="about__stat-num">3</span>
+            <span class="about__stat-label">Countries performed</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-num">10+</span>
+            <span class="about__stat-label">Venues &amp; stages</span>
+          </div>
+          <div class="about__stat">
+            <span class="about__stat-num">2</span>
+            <span class="about__stat-label">Master&#39;s degrees, each</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MEMBERS ============ -->
+  <section class="members">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">The Duo</span>
+      <h2>Amalie &amp; Romena</h2>
+    </div>
+
+    <div class="members__grid">
+      <article class="member-card" data-reveal>
+        <div class="member-card__portrait">
+          <span class="member-card__initials">AR</span>
+        </div>
+        <h3>Amalie Ravnsbæk</h3>
+        <span class="member-card__role">Accordion</span>
+        <ul class="member-card__edu">
+          <li>Master of Music in Accordion Performance — Royal Danish Academy of Music, 2024</li>
+          <li>Bachelor of Music in Accordion Performance — Royal Danish Academy of Music, 2022</li>
+        </ul>
+      </article>
+
+      <article class="member-card" data-reveal>
+        <div class="member-card__portrait">
+          <span class="member-card__initials">RL</span>
+        </div>
+        <h3>Romena Lengvinaite</h3>
+        <span class="member-card__role">Accordion</span>
+        <ul class="member-card__edu">
+          <li>Master of Music in Accordion Performance — Royal Danish Academy of Music, 2023</li>
+          <li>Bachelor of Music in Accordion Performance — Royal Danish Academy of Music, 2021</li>
+        </ul>
+      </article>
+    </div>
+
+    <p class="members__masterclasses" data-reveal>Masterclasses with <strong>Veli Kujala</strong> and <strong>Paulo Jorge Ferreira</strong></p>
+  </section>
+
+  <!-- ============ REPERTOIRE ============ -->
+  <section class="repertoire" id="repertorio">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">What we play</span>
+      <h2>Repertoire</h2>
+    </div>
+
+    <div class="repertoire__grid">
+      <article class="rep-card" data-reveal>
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M8 30 L20 8 L32 30" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M13 22h14" stroke="currentColor" stroke-width="1.2"/></svg>
+        <h3>Traditional Tango</h3>
+        <p>The soulful, rhythmic core of the Argentine tango tradition.</p>
+      </article>
+      <article class="rep-card" data-reveal>
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="1.2"/><circle cx="20" cy="20" r="3" fill="currentColor"/></svg>
+        <h3>Classical Nuances</h3>
+        <p>Refined interpretations drawing on classical technique and phrasing.</p>
+      </article>
+      <article class="rep-card" data-reveal>
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M8 20h6l4-10 4 20 4-14 4 4h6" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <h3>Original Accordion Music</h3>
+        <p>Compositions written specifically for two accordions.</p>
+      </article>
+      <article class="rep-card" data-reveal>
+        <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M10 30V14a10 10 0 0 1 20 0v16" stroke="currentColor" stroke-width="1.2"/><circle cx="10" cy="30" r="3" stroke="currentColor" stroke-width="1.2"/><circle cx="30" cy="30" r="3" stroke="currentColor" stroke-width="1.2"/></svg>
+        <h3>Contemporary</h3>
+        <p>Modern tunes and cross-genre pieces that keep the sound fresh.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ TRAYECTORIA ============ -->
+  <section class="journey" id="trayectoria">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">On stage</span>
+      <h2>Performance Journey</h2>
+    </div>
+
+    <ul class="journey__list" data-reveal>
+      <li><span class="journey__year">2023</span><span class="journey__what">Vilnius International Competition</span><span class="journey__where">Vilnius, Lithuania</span></li>
+      <li><span class="journey__year">—</span><span class="journey__what">Sibelius Academy</span><span class="journey__where">Helsinki, Finland</span></li>
+      <li><span class="journey__year">—</span><span class="journey__what">Conservatory Kokkola</span><span class="journey__where">Kokkola, Finland</span></li>
+      <li><span class="journey__year">—</span><span class="journey__what">Royal Danish Academy of Music</span><span class="journey__where">Copenhagen, Denmark</span></li>
+      <li><span class="journey__year">—</span><span class="journey__what">Frederiksberg Church</span><span class="journey__where">Copenhagen N, Denmark</span></li>
+      <li><span class="journey__year">—</span><span class="journey__what">Metronomen</span><span class="journey__where">Frederiksberg, Denmark</span></li>
+      <li><span class="journey__year">—</span><span class="journey__what">Novo Nordisk</span><span class="journey__where">Søborg, Denmark</span></li>
+      <li><span class="journey__year">—</span><span class="journey__what">Embassy of Lithuania</span><span class="journey__where">Charlottenlund, Denmark</span></li>
+      <li><span class="journey__year">—</span><span class="journey__what">Den Vilde Vinklub</span><span class="journey__where">Refshaleøen, Denmark</span></li>
+      <li><span class="journey__year">—</span><span class="journey__what">750 Years Jubilee of Holstebro</span><span class="journey__where">Holstebro, Denmark</span></li>
+    </ul>
+  </section>
+
+  <!-- ============ MAP ============ -->
+  <section class="tourmap" id="mapa">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Where we&#39;ve played</span>
+      <h2>Across Northern Europe</h2>
+    </div>
+
+    <div class="tourmap__wrap" data-reveal>
+      <svg class="tourmap__svg" viewBox="0 0 640 520" role="img" aria-label="Mapa de escenarios de Duo Sonus en Dinamarca, Finlandia y Lituania">
+        <!-- stylised landmasses -->
+        <path class="tourmap__land" d="M120 60 C 170 40, 230 55, 260 90 C 290 120, 310 160, 300 210 C 295 250, 260 280, 220 275 C 180 270, 150 240, 130 200 C 100 210, 70 190, 65 155 C 60 120, 85 80, 120 60 Z"/>
+        <path class="tourmap__land" d="M300 300 C 330 290, 360 300, 375 325 C 390 350, 385 380, 360 395 C 335 410, 305 400, 290 375 C 275 350, 275 315, 300 300 Z"/>
+        <path class="tourmap__land" d="M60 300 C 90 285, 130 290, 150 315 C 172 342, 168 380, 140 400 C 112 418, 78 408, 62 380 C 48 355, 40 318, 60 300 Z"/>
+
+        <!-- connective route -->
+        <path class="tourmap__route" d="M105 355 L118 340 L340 340 L200 150 L120 165" fill="none"/>
+
+        <!-- pins -->
+        <g class="tourmap__pin" data-city="Copenhagen" style="--x:105px;--y:355px;">
+          <circle cx="105" cy="355" r="5"/>
+          <text x="105" y="378">Copenhagen</text>
+        </g>
+        <g class="tourmap__pin" data-city="Frederiksberg" style="--x:118px;--y:340px;">
+          <circle cx="118" cy="340" r="4"/>
+          <text x="118" y="330">Frederiksberg</text>
+        </g>
+        <g class="tourmap__pin" data-city="Charlottenlund" style="--x:130px;--y:368px;">
+          <circle cx="130" cy="368" r="4"/>
+          <text x="130" y="390">Charlottenlund</text>
+        </g>
+        <g class="tourmap__pin" data-city="Søborg" style="--x:96px;--y:335px;">
+          <circle cx="96" cy="335" r="4"/>
+          <text x="96" y="325">Søborg</text>
+        </g>
+        <g class="tourmap__pin" data-city="Refshaleøen" style="--x:118px;--y:372px;">
+          <circle cx="118" cy="372" r="4"/>
+          <text x="118" y="394">Refshaleøen</text>
+        </g>
+        <g class="tourmap__pin" data-city="Holstebro" style="--x:70px;--y:330px;">
+          <circle cx="70" cy="330" r="4"/>
+          <text x="70" y="320">Holstebro</text>
+        </g>
+        <g class="tourmap__pin" data-city="Helsinki" style="--x:340px;--y:340px;">
+          <circle cx="340" cy="340" r="5"/>
+          <text x="340" y="362">Helsinki</text>
+        </g>
+        <g class="tourmap__pin" data-city="Kokkola" style="--x:300px;--y:220px;">
+          <circle cx="300" cy="220" r="4"/>
+          <text x="300" y="212">Kokkola</text>
+        </g>
+        <g class="tourmap__pin" data-city="Vilnius" style="--x:120px;--y:165px;">
+          <circle cx="120" cy="165" r="5"/>
+          <text x="120" y="188">Vilnius</text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ GALERIA ============ -->
+  <section class="gallery" id="galeria">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">In the moment</span>
+      <h2>Gallery</h2>
+    </div>
+
+    <div class="gallery__grid" data-reveal>
+      <div class="gallery__tile gallery__tile--wide"><span>Photos coming soon</span></div>
+      <div class="gallery__tile"><span>Photos coming soon</span></div>
+      <div class="gallery__tile"><span>Photos coming soon</span></div>
+      <div class="gallery__tile"><span>Photos coming soon</span></div>
+      <div class="gallery__tile gallery__tile--wide"><span>Photos coming soon</span></div>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING / CONTACTO ============ -->
+  <section class="booking" id="contacto">
+    <div class="booking__inner">
+      <div class="booking__text" data-reveal>
+        <span class="eyebrow">Get in touch</span>
+        <h2>Book Duo Sonus for your event</h2>
+        <p>Weddings, private events, concerts and corporate functions — tell us a little about your occasion and we&#39;ll get back to you.</p>
+
+        <div class="booking__direct">
+          <a href="mailto:duosonus.accordion@gmail.com">duosonus.accordion@gmail.com</a>
+          <a href="tel:+4551228226">+45 51 22 82 26</a>
+        </div>
+      </div>
+
+      <form class="booking__form" id="bookingForm" data-reveal>
+        <div class="booking__row">
+          <div class="field">
+            <label for="bkName">Name</label>
+            <input type="text" id="bkName" required>
+          </div>
+          <div class="field">
+            <label for="bkEmail">Email</label>
+            <input type="email" id="bkEmail" required>
+          </div>
+        </div>
+        <div class="booking__row">
+          <div class="field">
+            <label for="bkDate">Event date</label>
+            <input type="date" id="bkDate">
+          </div>
+          <div class="field">
+            <label for="bkType">Event type</label>
+            <select id="bkType">
+              <option value="Wedding">Wedding</option>
+              <option value="Private event">Private event</option>
+              <option value="Concert">Concert</option>
+              <option value="Corporate function">Corporate function</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="bkLocation">Location</label>
+          <input type="text" id="bkLocation" placeholder="City, venue...">
+        </div>
+        <div class="field">
+          <label for="bkMessage">Message</label>
+          <textarea id="bkMessage" rows="4" placeholder="Tell us about your event..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold">Send Booking Request</button>
+        <p class="booking__note">Opens your email client with the details pre-filled — nothing is sent automatically.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <span class="nav__mark">DS</span>
+      <span class="nav__word">Duo Sonus</span>
+    </div>
+    <div class="footer__contact">
+      <a href="mailto:duosonus.accordion@gmail.com">duosonus.accordion@gmail.com</a>
+      <a href="tel:+4551228226">+45 51 22 82 26</a>
+      <span>CVR 45104346</span>
+    </div>
+    <div class="footer__credit">
+      <span>&copy; <span id="year"></span> Duo Sonus</span>
+      <a href="https://frankitoman.github.io/web-portfolio/" target="_blank" rel="noopener">Site by Franco Mansilla ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
