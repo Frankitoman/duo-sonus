@@ -3,3 +3,11 @@ compatibility_date = "2026-08-15"
 
 [assets]
 directory = "./_site"
+
+[[routes]]
+pattern = "duosonus.dk"
+custom_domain = true
+
+[[routes]]
+pattern = "www.duosonus.dk"
+custom_domain = true
