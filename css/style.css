@@ -441,16 +441,6 @@ h1, h2, h3 {
   color: var(--ink-dim);
   padding: 0.4rem 0;
 }
-.members__masterclasses {
-  text-align: center;
-  margin-top: 3rem;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.05rem;
-  color: var(--ink-dim);
-}
-.members__masterclasses strong { color: var(--accent); font-weight: 500; font-style: normal; }
-
 /* ==========================================================================
    REPERTOIRE
    ========================================================================== */
