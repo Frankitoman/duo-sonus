@@ -57,51 +57,6 @@
     fadeEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-  /* ---------- delicate cursor glow (desktop only) ---------- */
-  var glow = document.querySelector('.cursor-glow');
-  var hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  if (glow && hasFinePointer) {
-    var raf = null;
-    document.addEventListener('mousemove', function (e) {
-      glow.classList.add('is-active');
-      if (raf) return;
-      raf = requestAnimationFrame(function () {
-        glow.style.setProperty('--mx', e.clientX + 'px');
-        glow.style.setProperty('--my', e.clientY + 'px');
-        raf = null;
-      });
-    });
-    document.addEventListener('mouseleave', function () {
-      glow.classList.remove('is-active');
-    });
-  }
-
-  /* ---------- magnetic buttons ---------- */
-  if (hasFinePointer) {
-    document.querySelectorAll('.btn').forEach(function (btn) {
-      btn.addEventListener('mousemove', function (e) {
-        var rect = btn.getBoundingClientRect();
-        var x = e.clientX - rect.left - rect.width / 2;
-        var y = e.clientY - rect.top - rect.height / 2;
-        btn.style.transform = 'translate(' + (x * 0.18) + 'px,' + (y * 0.35 - 2) + 'px)';
-      });
-      btn.addEventListener('mouseleave', function () {
-        btn.style.transform = '';
-      });
-    });
-  }
-
-  /* ---------- hero video: only show once it can actually play ---------- */
-  var heroVideo = document.getElementById('heroVideo');
-  if (heroVideo) {
-    heroVideo.addEventListener('canplay', function () {
-      heroVideo.classList.add('is-ready');
-    });
-    heroVideo.addEventListener('error', function () {
-      heroVideo.style.display = 'none';
-    }, true);
-  }
-
   /* ---------- tour map pins: keyboard/tap friendly tooltip toggle ---------- */
   document.querySelectorAll('.tourmap__pin').forEach(function (pin) {
     pin.addEventListener('click', function () {
