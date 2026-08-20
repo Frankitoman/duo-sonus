@@ -86,6 +86,7 @@ h1, h2, h3 {
 .gallery__tile.fade-img:nth-child(4) { transition-delay: 0.18s; }
 .gallery__tile.fade-img:nth-child(5) { transition-delay: 0.24s; }
 .gallery__tile.fade-img:nth-child(6) { transition-delay: 0.3s; }
+.gallery__tile.fade-img:nth-child(7) { transition-delay: 0.36s; }
 
 /* ---------- buttons ---------- */
 .btn {
