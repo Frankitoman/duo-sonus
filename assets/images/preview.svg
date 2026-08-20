@@ -1,25 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750">
   <defs>
-    <radialGradient id="bg1" cx="50%" cy="20%" r="70%">
-      <stop offset="0%" stop-color="#7a1f2b" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#7a1f2b" stop-opacity="0"/>
+    <radialGradient id="paperShade" cx="50%" cy="15%" r="80%">
+      <stop offset="0%" stop-color="#ece4d3" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ece4d3" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="bg2" cx="85%" cy="85%" r="60%">
-      <stop offset="0%" stop-color="#c9a24d" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#c9a24d" stop-opacity="0"/>
+    <radialGradient id="wineShade" cx="82%" cy="92%" r="60%">
+      <stop offset="0%" stop-color="#7c2a35" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#7c2a35" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#e6cd93"/>
-      <stop offset="60%" stop-color="#c9a24d"/>
-      <stop offset="100%" stop-color="#8a7038"/>
-    </linearGradient>
   </defs>
-  <rect width="1200" height="750" fill="#0a0a0b"/>
-  <rect width="1200" height="750" fill="url(#bg1)"/>
-  <rect width="1200" height="750" fill="url(#bg2)"/>
-  <circle cx="600" cy="330" r="220" fill="none" stroke="rgba(201,162,77,0.18)" stroke-width="1"/>
-  <circle cx="600" cy="330" r="150" fill="none" stroke="rgba(201,162,77,0.28)" stroke-width="1"/>
-  <text x="600" y="300" font-family="Georgia, 'Times New Roman', serif" font-size="88" fill="#f3ede1" text-anchor="middle" letter-spacing="2">Duo</text>
-  <text x="600" y="390" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="88" fill="url(#gold)" text-anchor="middle" letter-spacing="2">Sonus</text>
-  <text x="600" y="450" font-family="Arial, sans-serif" font-size="20" fill="#8d8880" text-anchor="middle" letter-spacing="6">ACCORDION DUO — COPENHAGEN</text>
+  <rect width="1200" height="750" fill="#f5f0e5"/>
+  <rect width="1200" height="750" fill="url(#paperShade)"/>
+  <rect width="1200" height="750" fill="url(#wineShade)"/>
+  <circle cx="600" cy="300" r="220" fill="none" stroke="rgba(124,42,53,0.18)" stroke-width="1"/>
+  <circle cx="600" cy="300" r="150" fill="none" stroke="rgba(124,42,53,0.28)" stroke-width="1"/>
+
+  <text x="600" y="270" font-family="Fraunces, Georgia, 'Times New Roman', serif" font-size="80" fill="#1c1a17" text-anchor="middle" letter-spacing="1">Duo</text>
+  <text x="600" y="356" font-family="Fraunces, Georgia, 'Times New Roman', serif" font-style="italic" font-size="80" fill="#7c2a35" text-anchor="middle" letter-spacing="1">Sonus</text>
+
+  <line x1="530" y1="392" x2="670" y2="392" stroke="rgba(124,42,53,0.4)" stroke-width="1"/>
+
+  <text x="600" y="428" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="19" fill="#7c2a35" text-anchor="middle" letter-spacing="5">ACCORDION DUO — COPENHAGEN</text>
+  <text x="600" y="468" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="21" fill="#55504a" text-anchor="middle" letter-spacing="0.5">"Two accordions, one vibrant sound."</text>
+  <text x="600" y="506" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="15" fill="#96897a" text-anchor="middle" letter-spacing="3">TANGO · CLASSICAL · CONTEMPORARY</text>
+
+  <!-- Performance map: 5 countries, echoing the site's own tour-map feature -->
+  <g font-family="Inter, 'Segoe UI', Arial, sans-serif" font-size="12.5" fill="#96897a" text-anchor="middle" letter-spacing="1.5">
+    <line x1="330" y1="600" x2="870" y2="600" stroke="rgba(124,42,53,0.3)" stroke-width="1"/>
+    <g>
+      <circle cx="330" cy="600" r="4.5" fill="#7c2a35"/>
+      <text y="632" x="330">DENMARK</text>
+    </g>
+    <g>
+      <circle cx="465" cy="600" r="4.5" fill="#7c2a35"/>
+      <text y="632" x="465">NORWAY</text>
+    </g>
+    <g>
+      <circle cx="600" cy="600" r="4.5" fill="#7c2a35"/>
+      <text y="632" x="600">FINLAND</text>
+    </g>
+    <g>
+      <circle cx="735" cy="600" r="4.5" fill="#7c2a35"/>
+      <text y="632" x="735">LITHUANIA</text>
+    </g>
+    <g>
+      <circle cx="870" cy="600" r="4.5" fill="#7c2a35"/>
+      <text y="632" x="870">ARGENTINA</text>
+    </g>
+  </g>
 </svg>
