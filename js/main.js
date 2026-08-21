@@ -64,36 +64,49 @@
     });
   });
 
-  /* ---------- booking form -> mailto ---------- */
+  /* ---------- booking form -> sent automatically via the worker ---------- */
   var form = document.getElementById('bookingForm');
+  var status = document.getElementById('bookingStatus');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      var name = document.getElementById('bkName').value.trim();
-      var email = document.getElementById('bkEmail').value.trim();
-      var date = document.getElementById('bkDate').value;
-      var type = document.getElementById('bkType').value;
-      var location = document.getElementById('bkLocation').value.trim();
-      var message = document.getElementById('bkMessage').value.trim();
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var payload = {
+        name: document.getElementById('bkName').value.trim(),
+        email: document.getElementById('bkEmail').value.trim(),
+        date: document.getElementById('bkDate').value,
+        type: document.getElementById('bkType').value,
+        location: document.getElementById('bkLocation').value.trim(),
+        message: document.getElementById('bkMessage').value.trim(),
+        company: document.getElementById('bkCompany').value
+      };
 
-      var lines = [
-        'Name: ' + name,
-        'Email: ' + email,
-        'Event type: ' + type,
-        date ? 'Event date: ' + date : null,
-        location ? 'Location: ' + location : null,
-        '',
-        message
-      ].filter(function (l) { return l !== null; });
+      submitBtn.disabled = true;
+      status.textContent = 'Sending…';
+      status.classList.remove('is-error');
 
-      var subject = 'Booking Inquiry - Duo Sonus (' + type + ')';
-      var mailto = 'mailto:duosonus.accordion@gmail.com'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(lines.join('\n'));
-
-      window.location.href = mailto;
-      form.reset();
+      fetch('/api/booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+        .then(function (result) {
+          if (result.ok && result.data.ok) {
+            status.textContent = "Thanks! We've received your request and will get back to you soon.";
+            form.reset();
+          } else {
+            throw new Error('send failed');
+          }
+        })
+        .catch(function () {
+          status.textContent = "Something went wrong sending that. Please email us directly at duosonus.accordion@gmail.com.";
+          status.classList.add('is-error');
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+        });
     });
   }
 

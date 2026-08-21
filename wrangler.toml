@@ -1,9 +1,15 @@
 name = "duo-sonus"
+main = "src/index.js"
 compatibility_date = "2026-08-15"
 workers_dev = true
 
 [assets]
 directory = "./_site"
+binding = "ASSETS"
+
+[[send_email]]
+name = "BOOKING_EMAIL"
+destination_address = "duosonus.accordion@gmail.com"
 
 [[routes]]
 pattern = "duosonus.dk"
