@@ -33,7 +33,12 @@
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
+        // member/repertoire cards replay their cascade every time they cross
+        // the viewport; everything else reveals once and stays put
+        var repeatable = entry.target.matches('.member-card, .rep-card');
+        if (repeatable) {
+          entry.target.classList.toggle('is-visible', entry.isIntersecting);
+        } else if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
           io.unobserve(entry.target);
         }
@@ -56,6 +61,41 @@
   } else {
     fadeEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
+
+  /* ---------- journey accordion: animate height instead of snapping ---------- */
+  document.querySelectorAll('.journey__year-group').forEach(function (details) {
+    var summary = details.querySelector('summary');
+    var panel = details.querySelector('.journey__list');
+
+    summary.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      if (details.open) {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+        panel.offsetHeight; // force reflow so the explicit height is committed first
+        requestAnimationFrame(function () {
+          panel.style.maxHeight = '0px';
+        });
+        panel.addEventListener('transitionend', function onClose() {
+          details.open = false;
+          panel.style.maxHeight = '';
+          panel.removeEventListener('transitionend', onClose);
+        });
+      } else {
+        details.open = true;
+        var targetHeight = panel.scrollHeight; // read now, while open=true has just forced layout
+        panel.style.maxHeight = '0px';
+        panel.offsetHeight; // force reflow so 0px is committed before animating up
+        requestAnimationFrame(function () {
+          panel.style.maxHeight = targetHeight + 'px';
+        });
+        panel.addEventListener('transitionend', function onOpen() {
+          panel.style.maxHeight = '';
+          panel.removeEventListener('transitionend', onOpen);
+        });
+      }
+    });
+  });
 
   /* ---------- tour map pins: keyboard/tap friendly tooltip toggle ---------- */
   document.querySelectorAll('.tourmap__pin').forEach(function (pin) {
@@ -85,6 +125,7 @@
       submitBtn.disabled = true;
       status.textContent = 'Sending…';
       status.classList.remove('is-error');
+      status.classList.add('is-visible');
 
       fetch('/api/booking', {
         method: 'POST',

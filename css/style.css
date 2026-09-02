@@ -116,6 +116,7 @@ h1, h2, h3 {
 .btn--text span { transition: transform 0.3s var(--ease); }
 .btn--text:hover { color: var(--accent); border-color: var(--accent); }
 .btn--text:hover span { transform: translateX(4px); }
+.btn:active { transform: scale(0.97); transition: transform 120ms ease-out; }
 
 /* ==========================================================================
    NAV
@@ -212,19 +213,34 @@ h1, h2, h3 {
 .nav__burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 .nav__mobile {
-  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: flex;
   flex-direction: column;
   padding: 1rem 2rem 1.6rem;
   gap: 1.1rem;
   background: rgba(245, 240, 229, 0.98);
   border-bottom: 1px solid var(--line);
+  opacity: 0;
+  transform: translateY(-8px);
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 220ms var(--ease), transform 220ms var(--ease), visibility 0s linear 220ms;
 }
 .nav__mobile a {
   font-size: 0.95rem;
   letter-spacing: 0.02em;
   color: var(--ink-dim);
 }
-.nav__mobile.is-open { display: flex; }
+.nav__mobile.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 220ms var(--ease), transform 220ms var(--ease), visibility 0s linear 0s;
+}
 
 /* ==========================================================================
    HERO
@@ -395,8 +411,9 @@ h1, h2, h3 {
   padding: 3rem 2rem;
   background: var(--paper);
   border-radius: var(--radius);
-  transition: transform 0.4s var(--ease), box-shadow 0.4s ease;
+  transition: opacity 1.05s var(--ease), transform 1.05s var(--ease), box-shadow 0.4s ease;
 }
+.member-card[data-reveal]:nth-child(2) { transition-delay: 0.18s; }
 .member-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -24px rgba(28, 26, 23, 0.3); }
 .member-card__portrait {
   width: 100px;
@@ -450,8 +467,11 @@ h1, h2, h3 {
   text-align: center;
   border-radius: var(--radius);
   border: 1px solid var(--line);
-  transition: transform 0.4s var(--ease), border-color 0.4s ease, background 0.4s ease;
+  transition: opacity 1.05s var(--ease), transform 1.05s var(--ease), border-color 0.4s ease, background 0.4s ease;
 }
+.rep-card[data-reveal]:nth-child(2) { transition-delay: 0.18s; }
+.rep-card[data-reveal]:nth-child(3) { transition-delay: 0.36s; }
+.rep-card[data-reveal]:nth-child(4) { transition-delay: 0.54s; }
 .rep-card:hover { transform: translateY(-6px); border-color: transparent; background: var(--paper-2); }
 .rep-card svg { width: 30px; height: 30px; margin: 0 auto 1.4rem; color: var(--accent); }
 .rep-card h3 { font-size: 1.1rem; margin-bottom: 0.6rem; font-weight: 500; }
@@ -501,6 +521,8 @@ h1, h2, h3 {
 .journey__year-group[open] .journey__chevron { transform: rotate(180deg); }
 .journey__list {
   padding: 0 1.6rem 1rem;
+  overflow: hidden;
+  transition: max-height 320ms var(--ease);
 }
 .journey__list li {
   display: grid;
@@ -554,7 +576,8 @@ h1, h2, h3 {
   transform-origin: var(--x) var(--y);
   transition: r 0.3s ease;
 }
-.tourmap__pin:hover circle { r: 7; }
+.tourmap__pin:hover circle,
+.tourmap__pin.is-open circle { r: 7; }
 .tourmap__pin text {
   font-family: var(--font-body);
   font-size: 15px;
@@ -562,7 +585,8 @@ h1, h2, h3 {
   text-anchor: middle;
   transition: fill 0.3s ease;
 }
-.tourmap__pin:hover text { fill: var(--accent); }
+.tourmap__pin:hover text,
+.tourmap__pin.is-open text { fill: var(--accent); }
 
 /* ==========================================================================
    GALLERY
@@ -690,7 +714,10 @@ h1, h2, h3 {
   font-size: 0.85rem;
   color: var(--accent);
   min-height: 1.2em;
+  opacity: 0;
+  transition: opacity 200ms ease;
 }
+.booking__status.is-visible { opacity: 1; }
 .booking__status.is-error { color: #b3261e; }
 
 /* ==========================================================================
@@ -762,4 +789,8 @@ h1, h2, h3 {
   [data-reveal] { opacity: 1; transform: none; transition: none; }
   .fade-img { opacity: 1; transform: none; transition: none; }
   .hero__scroll { animation: none; }
+  .btn:active { transition: none; }
+  .journey__list { transition: none; }
+  .nav__mobile { transition-duration: 1ms; }
+  .booking__status { transition: none; }
 }
