@@ -784,6 +784,14 @@ h1, h2, h3 {
   .hero .btn--text { padding: 0.95rem 0.6rem; }
 }
 
+/* shrinking the map to fit the screen makes the country/city labels
+   unreadably small below ~900px; keep them at a legible size and let
+   the map pan horizontally instead, on phones and tablets alike */
+@media (max-width: 900px) {
+  .tourmap__wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 0.5rem; }
+  .tourmap__svg { width: auto; min-width: 900px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   [data-reveal] { opacity: 1; transform: none; transition: none; }
